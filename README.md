@@ -1,2 +1,2 @@
 # nodeJsSampleService
-Sample app to test CI/CD vsts
+Sample app to test CI/CD
