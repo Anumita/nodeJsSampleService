@@ -9,7 +9,7 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', function (req, res) {
-  res.send('Hello Docker hub. CD1 should automatically update the azure web app.\n');
+  res.send('Hello Docker hub -update 2. CDshould automatically update the azure web app.\n');
 });
 
 app.listen(PORT, HOST);
