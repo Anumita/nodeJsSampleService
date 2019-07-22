@@ -1,6 +1,6 @@
 version: v1.0.0
 steps:
-  - build: -t repository:1 -t repository:1 --label "localhost.image.system.teamfoundationcollectionuri=http://localhost/DefaultCollection/" --label "localhost.image.build.sourceversion=0f57fd25433149d0363fe068f8c45bb0f4d6352e" -f Dockerfile .
+  - build: -t repository:1 -t repository:2 --label "localhost.image.system.teamfoundationcollectionuri=http://localhost/DefaultCollection/" --label "localhost.image.build.sourceversion=0f57fd25433149d0363fe068f8c45bb0f4d6352e" -f Dockerfile .
   - push:
-      - repository:1
-      - repository:1
+      - repository:2
+      - repository:2
