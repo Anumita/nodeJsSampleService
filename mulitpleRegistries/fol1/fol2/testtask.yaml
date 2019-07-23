@@ -1,0 +1,6 @@
+version: v1.0.0
+steps:
+  - build: -t {{.Values.REGISTRY1}}/hello-world:{{.Run.ID}} . -f mulitpleRegistries/fol1/fol2/hello-world.dockerfile
+  - push: ["{{.Values.REGISTRY1}}/hello-world:{{.Run.ID}}"]
+  - build: -t {{.Values.REGISTRY2}}/hello-world:{{.Run.ID}} . -f mulitpleRegistries/fol1/fol2/hello-world.dockerfile
+  - push: ["{{.Values.REGISTRY2}}/hello-world:{{.Run.ID}}"]
