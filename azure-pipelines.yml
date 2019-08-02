@@ -11,10 +11,13 @@ pool:
 
 steps:
 - task: ACRTaskV0@0
+  displayName: buildAcr
   inputs:
     azureSubscription: 'anshenoDev'
-    azureContainerRegistry: 'anshenormdev'
+    azureContainerRegistry: 'ajacr4'
+    connectionType: 'github'
+    gitHubConnection: 'GitHub connection 2'
+    repoUrl: '$(Build.Repository.Uri)'
+    branch: 'test'
     dockerfileOrYaml: 'Dockerfile'
-    imageNames: |
-      $(Build.Repository.Name):$(Build.BuildId)
-      $(Build.Repository.Name):v1
+    imageNames: '$(Build.Repository.Name):$(Build.BuildId)'
